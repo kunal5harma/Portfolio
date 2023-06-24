@@ -1,4 +1,3 @@
-// --------Typing animation-----------
 var typed = new Typed(".typing", {
     strings: ["", "Web Designer", "Web Developer", "Programmer"],
     typeSpeed: 100,
@@ -80,25 +79,3 @@ function asideSectionTogglerBtn() {
     }
 }
 
-// --------Contact Form-----------
-
-var btn = document.getElementById('butn');
-btn.addEventListener('click', function (e) {
-    e.preventDefault()
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value;
-    var body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Subject: ' + subject + '<br/> Message: ' + message;
-
-    Email.send({
-        SecureToken: "b70ec3c3-ba9d-4648-9b70-44bee1363b2d",
-        To: 'ks582002@gmail.com',
-        From: "kunalsharma_me20a9_53@dtu.ac.in",
-        Subject: "Contact message",
-        Body: body
-    }).then(
-        message => alert(message)
-    );
-
-})
